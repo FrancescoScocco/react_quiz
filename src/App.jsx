@@ -47,7 +47,7 @@ function App() {
         {finished ? (
           <div className='end-screen'>
             <p className='finished'>Finished</p>
-            <p>You scored {100 * (score / questions.length)}%</p>
+            <p className='scored'>You scored {100 * (score / questions.length)}%</p>
             <button
               className='retry-btn'
               onClick={handleRetryClick}
