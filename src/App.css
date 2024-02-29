@@ -1,0 +1,90 @@
+.quiz {
+  max-width: 500px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  gap: 20px;
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.25);
+}
+
+.end-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info .question-counter,
+.finished {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.info .question-counter .total,
+.info .question {
+  font-size: 1.15rem;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.options button,
+.end-screen .retry-btn {
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 1rem;
+  text-align: start;
+  cursor: pointer;
+  color: white;
+  border: 2px solid white;
+  transition: 0.1s ease background-color, 0.1s ease border-color, 0.1s ease color;
+}
+
+.options button.option {
+  background-color: transparent;
+}
+
+.options button.next,
+.end-screen .retry-btn {
+  align-self: start;
+  background-color: aliceblue;
+}
+
+.options button.next:disabled {
+  opacity: 0.5;
+}
+
+.options button:hover:not(:disabled),
+.end-screen .retry-btn:hover {
+  background-color: rosybrown;
+  border-color: black;
+  color: black;
+}
+
+.options button:not(.correct):disabled,
+.options button:not(.incorrect):disabled {
+  color: white;
+  cursor: not-allowed;
+}
+
+.options button.correct,
+.options button.correct:disabled {
+  background-color: green;
+}
+
+.options button.incorrect,
+.options button.incorrect:disabled {
+  background-color: red;
+}
